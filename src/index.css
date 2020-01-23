@@ -12,3 +12,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container {
+  margin-top: 30px;
+}
+
+.dateOutput {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #eeeeee;
+  font-size: 14px;
+}
+
+.dateOutput .row {
+  margin-top: 5px;
+}
+
+pre  {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.jsonOutput .string { color: green; }
+.jsonOutput .number { color: darkorange; }
+.jsonOutput .boolean { color: blue; }
+.jsonOutput .null { color: magenta; }
+.jsonOutput .key { color: red; }
