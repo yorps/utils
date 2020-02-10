@@ -38,7 +38,7 @@ class Base64Decoder extends React.Component {
             try {
                 output = atob(input);
             } catch (e) {
-                output = "<Eingabe ist ungültig>";
+                output = "<Input invalid>";
                 inputValid = false;
             }
         } else {
@@ -61,7 +61,7 @@ class Base64Decoder extends React.Component {
 
 
                     <div className="form-group">
-                        <label htmlFor="exampleFormControlTextarea1">Text eingeben oder kopieren:</label>
+                        <label htmlFor="exampleFormControlTextarea1"></label>
                         <textarea className={classNameInput}
                                   id="exampleFormControlTextarea1"
                                   rows="10"
@@ -90,9 +90,9 @@ class Base64Decoder extends React.Component {
                     </div>
 
 
-                    <div>More Info: https://de.wikipedia.org/wiki/Base64</div>
+                    <div>More Info: <a href=" https://de.wikipedia.org/wiki/Base64">https://de.wikipedia.org/wiki/Base64</a></div>
 
-                    <h3>Code Examples</h3>
+
 
                 </div>
             </div>
