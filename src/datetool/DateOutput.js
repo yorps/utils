@@ -54,7 +54,7 @@ export class DateOutput extends React.Component {
                         Timestamp (UTC)
                     </div>
                     <div className="col">
-                        <input type="text" disabled value={timeOut}/>
+                        <input type="text" readonly value={timeOut}/>
                     </div>
                 </div>
 
@@ -63,7 +63,7 @@ export class DateOutput extends React.Component {
                         <b>UTC</b><br/>
                     </div>
                     <div className="col">
-                        <input type="text" disabled  value={timeString}/>
+                        <input type="text" readonly  value={timeString}/>
                     </div>
                 </div>
 
@@ -72,7 +72,7 @@ export class DateOutput extends React.Component {
                         Local<br/>
                     </div>
                     <div className="col">
-                        <input type="text" disabled value={timeStringLocale}/>
+                        <input type="text" readonly value={timeStringLocale}/>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@ export class DateOutput extends React.Component {
                         Timestamp day start<br/>
                     </div>
                     <div className="col">
-                        <input type="text" disabled value={dayStart}/>
+                        <input type="text" readonly value={dayStart}/>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@ export class DateOutput extends React.Component {
                         Timestamp day end<br/>
                     </div>
                     <div className="col">
-                        <input type="text" disabled value={dayEnd}/>
+                        <input type="text" readonly value={dayEnd}/>
                     </div>
                 </div>
 
@@ -102,7 +102,7 @@ export class DateOutput extends React.Component {
                         Sec. since midnight<br/>
                     </div>
                     <div className="col">
-                        <input type="text" disabled value={secondsSinceMidnight}/>
+                        <input type="text" readonly value={secondsSinceMidnight}/>
                     </div>
                 </div>
 
@@ -112,7 +112,7 @@ export class DateOutput extends React.Component {
                         Day of week<br/>
                     </div>
                     <div className="col">
-                        <input type="text" disabled value={weekday}/>
+                        <input type="text" readonly value={weekday}/>
                     </div>
                 </div>
             </div>
