@@ -86,7 +86,6 @@ class DateTool extends React.Component {
         //this.setState({baseTime: e.target.value, baseTimeString: baseTimeString});
 
         if (date) {
-            console.debug("set base time string");
             this.setBaseTime(parseInt(date.getTime() / 1000));
         } else {
             this.setState({baseTimeString: baseTimeString});
@@ -208,7 +207,7 @@ class DateTool extends React.Component {
                     <div className="row no-gutters">
                         <div className="col-3">
                             <label>Unix Timestamp</label><br/>
-                            <input type="text" value={this.state.baseTimeInput != NaN ? this.state.baseTimeInput : ""}
+                            <input type="text" value={!isNaN(this.state.baseTimeInput) ? this.state.baseTimeInput : ""}
                                    // ref={this.inputBaseTime}
                                    ref={(input) => { this.inputBaseTime = input; }}
                                    onChange={this.handleBaseTimeChange}
