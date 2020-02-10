@@ -10,13 +10,16 @@ class JSONTool extends React.Component {
 
     constructor(props) {
         super(props);
+
+        let input =  '{"a":1, "b":"foo", "c":[false,"false",null,"null", {"d":{"e":1.3e5,"f":"1.3e5"}}]}';
+        let jsonObj = JSON.parse(input);
+        let output = this.formatJSON(jsonObj);
         this.state = {
-            input: "{'a':1, 'b':'foo', 'c':[false,'false',null,'null', {'d':{'e':1.3e5,'f':'1.3e5'}}]}",
-            output: "",
+            input: input,
+            output: output,
             option: 0, // 0 = decode // 1 = encode
             inputValid: true
-        }
-
+        };
     }
 
     //Focus on Input field immediately
@@ -38,7 +41,7 @@ class JSONTool extends React.Component {
         //return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
 
 
-
+        // eslint-disable-next-line
         return json.replace(/('(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*'(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
            let cls = 'number';
             if (/^"/.test(match)) {
@@ -64,7 +67,6 @@ class JSONTool extends React.Component {
 
 
     encodeDecodeOutput(input) {
-        console.debug("START");
         let output = "";
         let inputValid = true;
 
@@ -78,23 +80,18 @@ class JSONTool extends React.Component {
             .replace(/\\b/g, "\\b")
             .replace(/\\f/g, "\\f");
 // remove non-printable and other non-valid JSON chars
+        // eslint-disable-next-line
         input = input.replace(/[\u0000-\u0019]+/g,"");
 
         try {
-            console.debug(input);
-            console.debug(typeof input);
             let jsonObj = JSON.parse(input);
-            console.debug("ready");
-            console.debug(jsonObj);
             output = this.formatJSON(jsonObj);
         } catch (e) {
-            console.debug(e);
             this.inputValid = false;
-            output = "<ungueltig>"
+            output = "<b>Ungültiges JSON:</b> <br>" + e;
         }
-        console.debug("set  state "  + output);
-        // output = this.formatJson(input);
-        // output = this.syntaxHighlight(input);
+         //output = this.formatJSON(input);
+         //output = this.syntaxHighlight(input);
 
         this.setState({input: input, output: output,  inputValid: inputValid});
     }
@@ -122,7 +119,7 @@ class JSONTool extends React.Component {
                                   rows="10"
                                   ref={(input) => { this.textInput = input; }}
                                   value={this.state.input}
-                                  onChange={this.handleInputChange}> </textarea>
+                                  onChange={this.handleInputChange}/>
                     </div>
 
                     <div className="form-group">
