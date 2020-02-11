@@ -71,7 +71,7 @@ export class Navbar extends React.Component {
                         <NavItem path="/base64decoder" name="Base64-Decoder" />
                         <NavItem path="/json" name="JSON" />
                         <NavItem path="/converter" name="Converter" />
-
+                        <NavItem path="/generator" name="Hash Generator" />
 
                         <NavDropdown name="Dropdown">
                             <a className="dropdown-item" href="/">Action</a>
