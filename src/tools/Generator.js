@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from "../Navbar";
 import md5 from 'crypto-js/md5';
 import sha256 from 'crypto-js/sha256';
+import sha1 from 'crypto-js/sha1';
+import sha512 from 'crypto-js/sha512';
 
 
 class Generator extends React.Component {
@@ -9,14 +11,10 @@ class Generator extends React.Component {
     constructor(props) {
         super(props);
 
-        this.options = [
-            'md5',
-            'sha256'
-        ];
         this.state = {
             input: "",
             output: "",
-            func: "md5"
+            func: "sha256"
         };
     }
 
@@ -34,8 +32,15 @@ class Generator extends React.Component {
             case "md5":
                 output = md5(input);
                 break;
+            case "sha1":
+                output = sha1(input);
+                break;
             case "sha256":
                 output = sha256(input);
+                break;
+            case "sha512":
+                output = sha512(input);
+            default:
                 break;
         }
         this.setState({input: input, output: output, func: func});
@@ -64,7 +69,9 @@ class Generator extends React.Component {
                     Hash function: &nbsp;
                     <select onChange={this.handleFunctionChange} value={this.state.func}>
                         <option value="md5">MD5</option>
+                        <option value="sha1">SHA1</option>
                         <option value="sha256">SHA256</option>
+                        <option value="sha512">SHA512</option>
                     </select>
                     <br/>
 
