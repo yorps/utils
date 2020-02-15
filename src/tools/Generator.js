@@ -4,7 +4,7 @@ import md5 from 'crypto-js/md5';
 import sha256 from 'crypto-js/sha256';
 import sha1 from 'crypto-js/sha1';
 import sha512 from 'crypto-js/sha512';
-
+import md5 from 'crypto-js/';
 
 class Generator extends React.Component {
 
@@ -40,6 +40,8 @@ class Generator extends React.Component {
                 break;
             case "sha512":
                 output = sha512(input);
+                break;
+            
             default:
                 break;
         }
