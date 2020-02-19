@@ -1,10 +1,9 @@
 import React from 'react'
 import Navbar from "../Navbar";
 import md5 from 'crypto-js/md5';
-import sha256 from 'crypto-js/sha256';
 import sha1 from 'crypto-js/sha1';
+import sha256 from 'crypto-js/sha256';
 import sha512 from 'crypto-js/sha512';
-import md5 from 'crypto-js/';
 
 class Generator extends React.Component {
 
@@ -62,7 +61,7 @@ class Generator extends React.Component {
                     <div className="form-group">
                         <textarea id="generatorInput"
                                   rows="10"
-                                  class="form-control"
+                                  className="form-control"
                                   ref={(input) => { this.textInput = input; }}
                                   value={this.state.input}
                                   onChange={this.handleInputChange}/>
@@ -81,9 +80,9 @@ class Generator extends React.Component {
                     <div className="form-group">
                         <br/>
                         <textarea id="generatorOutput"
-                                  class="form-control"
+                                  className="form-control"
                                   rows="10"
-                                  value={this.state.output}/>
+                                  defaultValue={this.state.output}/>
 
                     </div>
 
