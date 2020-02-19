@@ -8,7 +8,8 @@
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.3.1",
-    "crypto-js": "^3.2.0"
+    "crypto-js": "^3.2.0",
+    "xml-formatter": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

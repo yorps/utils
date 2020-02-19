@@ -11,8 +11,8 @@ import Converter from './tools/Converter';
 import Generator from './tools/Generator';
 import DateTool from './datetool/DateTool';
 import Base64Decoder from './decoder/Base64Decoder';
-import JSONTool from "./json/JSONTool";
-
+import JSONFormatter from "./formatter/JSONFormatter";
+import XMLFormatter from "./formatter/XMLFormatter";
 
 
 
@@ -29,7 +29,8 @@ const routing = (
             <Route path="/converter" component={Converter} />
             <Route path="/generator" component={Generator} />
             <Route path="/base64decoder" component={Base64Decoder} />
-            <Route path="/json" component={JSONTool} />
+            <Route path="/json" component={JSONFormatter} />
+            <Route path="/xml" component={XMLFormatter} />
 
     </Router>
 )

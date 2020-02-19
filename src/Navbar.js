@@ -73,13 +73,19 @@ export class Navbar extends React.Component {
                         <NavItem path="/converter" name="Converter" />
                         <NavItem path="/generator" name="Hash Generator" />
 
+                        <NavDropdown name="Formatter">
+                            <a className="dropdown-item" href="/json">JSON</a>
+                            <a className="dropdown-item" href="/XML">XML</a>
+                        </NavDropdown>
+
+{/* 
                         <NavDropdown name="Dropdown">
                             <a className="dropdown-item" href="/">Action</a>
                             <a className="dropdown-item" href="/">Another action</a>
                             <div className="dropdown-divider" />
                             <a className="dropdown-item" href="/">Something else here</a>
                         </NavDropdown>
-
+*/}
 
                         {/*<li className="nav-item dropdown">*/}
                             {/*<a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*/}

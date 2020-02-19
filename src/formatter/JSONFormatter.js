@@ -6,7 +6,7 @@ import Navbar from "../Navbar";
  * Uses https://www.npmjs.com/package/js-beautify
  *
  */
-class JSONTool extends React.Component {
+class JSONFormatter extends React.Component {
 
     constructor(props) {
         super(props);
@@ -28,7 +28,7 @@ class JSONTool extends React.Component {
     }
 
     handleInputChange = (e) => {
-        this.encodeDecodeOutput(e.target.value);
+        this.formatOutput(e.target.value);
     };
 
     formatJSON(jsonObj) {
@@ -66,7 +66,7 @@ class JSONTool extends React.Component {
     }
 
 
-    encodeDecodeOutput(input) {
+    formatOutput(input) {
         let output = "";
         let inputValid = true;
 
@@ -88,7 +88,7 @@ class JSONTool extends React.Component {
             output = this.formatJSON(jsonObj);
         } catch (e) {
             this.inputValid = false;
-            output = "<b>Ungültiges JSON:</b> <br>" + e;
+            output = "<b>Invalid JSON:</b> <br>" + e;
         }
          //output = this.formatJSON(input);
          //output = this.syntaxHighlight(input);
@@ -109,7 +109,7 @@ class JSONTool extends React.Component {
 
 
                 <div className="container">
-                    <h2>JSON Tool</h2>
+                    <h2>JSON Formatter</h2>
 
 
                     <div className="form-group">
@@ -136,4 +136,4 @@ class JSONTool extends React.Component {
 
     }
 }
-export default JSONTool;
+export default JSONFormatter;
