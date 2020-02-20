@@ -1,7 +1,5 @@
 import React from 'react'
 import Navbar from "../Navbar";
-import 'xml-formatter';
-
 
 /**
  * Uses https://www.npmjs.com/package/js-beautify
@@ -30,13 +28,9 @@ class XMLFormatter extends React.Component {
         this.formatOutput(e.target.value);
     };
 
-   
-    formatOutput(input) {
-        let output = "";
-        let inputValid = true;
-
-        // remove non-printable and other non-valid chars
-        input = input.replace(/\\n/g, "\\n")
+    // remove non-printable and other non-valid chars
+    cleanInput(input) {
+        let cleanedInput =  input.replace(/\\n/g, "\\n")
             .replace(/\\'/g, "\\'")
             .replace(/\\"/g, '\\"')
             .replace(/\\&/g, "\\&")
@@ -45,13 +39,29 @@ class XMLFormatter extends React.Component {
             .replace(/\\b/g, "\\b")
             .replace(/\\f/g, "\\f");
         // eslint-disable-next-line
-        input = input.replace(/[\u0000-\u0019]+/g,"");
+        cleanedInput = cleanedInput.replace(/[\u0000-\u0019]+/g,"");
+        return cleanedInput;
+    }
 
-
+    formatOutput(input) {
+        let output = "";
+        let inputValid = true;
 
         try {
-            var format = require('xml-formatter');
-            output = format(input);
+            //var format = require('xml-formatter');
+
+            function formatXml(xml, tab) { // tab = optional indent value, default is tab (\t)
+                var formatted = '', indent= '';
+                tab = tab || '\t';
+                xml.split(/>\s*</).forEach(function(node) {
+                    if (node.match( /^\/\w/ )) indent = indent.substring(tab.length); // decrease indent by one 'tab'
+                    formatted += indent + '<' + node + '>\r\n';
+                    if (node.match( /^<?\w[^>]*[^]$/ )) indent += tab;              // increase indent
+                });
+                return formatted.substring(1, formatted.length-3);
+            }
+
+            output = formatXml(this.cleanInput(input));
         } catch (e) {
             this.inputValid = false;
             output = "<b>Invalid XML:</b> <br>" + e;
@@ -87,14 +97,15 @@ class XMLFormatter extends React.Component {
                     </div>
 
                     <div className="form-group">
-                        <br/>
-                       
+                        <br />
+
                         <textarea className={classNameInput}
                             rows="10"
-                            value={this.state.output}/>
+                            value={this.state.output} />
 
-                       
 
+
+                        <pre>{this.state.output}</pre>
                     </div>
 
 
