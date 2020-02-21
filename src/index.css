@@ -29,8 +29,8 @@ code {
 }
 
 pre  {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
-.jsonOutput .string { color: green; }
-.jsonOutput .number { color: darkorange; }
-.jsonOutput .boolean { color: blue; }
-.jsonOutput .null { color: magenta; }
-.jsonOutput .key { color: red; }
+.formatterOutput .string { color: green; }
+.formatterOutput .number { color: darkorange; }
+.formatterOutput .boolean { color: blue; }
+.formatterOutput .null { color: magenta; }
+.formatterOutput .key { color: red; }
