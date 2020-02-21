@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from "../Navbar";
+import Navbar from "../navbar/Navbar";
 import md5 from 'crypto-js/md5';
 import sha1 from 'crypto-js/sha1';
 import sha256 from 'crypto-js/sha256';

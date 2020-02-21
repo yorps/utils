@@ -13,6 +13,7 @@ import DateTool from './datetool/DateTool';
 import Base64Decoder from './decoder/Base64Decoder';
 import JSONFormatter from "./formatter/JSONFormatter";
 import XMLFormatter from "./formatter/XMLFormatter";
+import Formatter from "./formatter/Formatter";
 
 
 

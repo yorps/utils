@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from "../Navbar";
+import Navbar from "../navbar/Navbar";
 
 
 class Base64Decoder extends React.Component {
