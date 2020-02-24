@@ -1,5 +1,6 @@
 import React from 'react'
 import {formatDate} from './DateHelper';
+import CopyInput from '../commons/CopyInput';
 
 
 export class DateOutput extends React.Component {
@@ -54,7 +55,7 @@ export class DateOutput extends React.Component {
                         Timestamp (UTC)
                     </div>
                     <div className="col">
-                        <input type="text" readOnly defaultValue={timeOut}/>
+                        <CopyInput text={timeOut}></CopyInput>
                     </div>
                 </div>
 
@@ -63,7 +64,7 @@ export class DateOutput extends React.Component {
                         <b>UTC</b><br/>
                     </div>
                     <div className="col">
-                        <input type="text" readOnly defaultValue={timeString}/>
+                        <CopyInput text={timeString}></CopyInput>
                     </div>
                 </div>
 
@@ -72,7 +73,7 @@ export class DateOutput extends React.Component {
                         Local<br/>
                     </div>
                     <div className="col">
-                        <input type="text" readOnly defaultValue={timeStringLocale}/>
+                        <CopyInput text={timeStringLocale}></CopyInput>
                     </div>
                 </div>
 
@@ -83,7 +84,7 @@ export class DateOutput extends React.Component {
                         Timestamp day start<br/>
                     </div>
                     <div className="col">
-                        <input type="text" readOnly defaultValue={dayStart}/>
+                        <CopyInput text={dayStart}></CopyInput>
                     </div>
                 </div>
 
@@ -92,7 +93,7 @@ export class DateOutput extends React.Component {
                         Timestamp day end<br/>
                     </div>
                     <div className="col">
-                        <input type="text" readOnly defaultValue={dayEnd}/>
+                        <CopyInput text={dayEnd}></CopyInput>
                     </div>
                 </div>
 
@@ -102,7 +103,7 @@ export class DateOutput extends React.Component {
                         Sec. since midnight<br/>
                     </div>
                     <div className="col">
-                        <input type="text" readOnly defaultValue={secondsSinceMidnight}/>
+                        <CopyInput text={secondsSinceMidnight}></CopyInput>
                     </div>
                 </div>
 
@@ -112,7 +113,7 @@ export class DateOutput extends React.Component {
                         Day of week<br/>
                     </div>
                     <div className="col">
-                        <input type="text" readOnly defaultValue={weekday}/>
+                        <CopyInput text={weekday}></CopyInput>
                     </div>
                 </div>
             </div>
