@@ -26,6 +26,7 @@ class Generator extends React.Component {
     };
 
     generateHash (input, func) {
+        console.debug("generate hash!?  ", input, func);
         let output = "";
         switch (func) {
             case "md5":
@@ -44,6 +45,7 @@ class Generator extends React.Component {
             default:
                 break;
         }
+        console.debug("set tstate", output);
         this.setState({input: input, output: output, func: func});
     }
 
@@ -82,7 +84,8 @@ class Generator extends React.Component {
                         <textarea id="generatorOutput"
                                   className="form-control"
                                   rows="10"
-                                  defaultValue={this.state.output}/>
+                                  readOnly 
+                                  value={this.state.output}/>
 
                     </div>
 
