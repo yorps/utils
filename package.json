@@ -2,7 +2,7 @@
   "name": "utils",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://yorps.github.io/utils",
+  "homepage": "https://yorps.github.io/utils/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.8.4",
