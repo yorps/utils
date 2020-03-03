@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 // https://m.pardel.net/react-and-bootstrap-4-part-1-setup-navigation-d4767e2ed9f0
-// Das hier ist eine "functional component" (geht nur, wenn das Objekt keinen state hat)
+// Functional component without state
+// <!--<Link to={`${process.env.PUBLIC_URL}/page-path`}>…</Link>-->
 const NavItem = props => {
     const pageURI = window.location.pathname+window.location.search;
     const liClassName = (props.path === pageURI) ? "nav-item active" : "nav-item";
@@ -67,42 +68,20 @@ export class Navbar extends React.Component {
                     <ul className="navbar-nav mr-auto">
 
                         <NavItem path="/" name="Home" />
-                        <NavItem path="/datetool" name="Dates" />
-                        <NavItem path="/base64decoder" name="Base64-Decoder" />
-                        <NavItem path="/converter" name="Converter" />
-                        <NavItem path="/generator" name="Hash Generator" />
+                        <NavItem path='#datetool' name="Date Tool" />
+                        <NavItem path='#base64decoder' name="Base64-Decoder" />
+                        <NavItem path="#generator" name="Hash Generator" />
 
                         <NavDropdown name="Formatter">
-                            <a className="dropdown-item" href="/json">JSON</a>
-                            <a className="dropdown-item" href="/XML">XML</a>
+                            <a className="dropdown-item" href="#json">JSON</a>
+                            <a className="dropdown-item" href="#xml">XML</a>
                         </NavDropdown>
-
-{/* 
-                        <NavDropdown name="Dropdown">
-                            <a className="dropdown-item" href="/">Action</a>
-                            <a className="dropdown-item" href="/">Another action</a>
-                            <div className="dropdown-divider" />
-                            <a className="dropdown-item" href="/">Something else here</a>
-                        </NavDropdown>
-*/}
-
-                        {/*<li className="nav-item dropdown">*/}
-                            {/*<a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*/}
-                                {/*Dropdown*/}
-                            {/*</a>*/}
-                            {/*<div className="dropdown-menu" aria-labelledby="navbarDropdown">*/}
-                                {/*<a className="dropdown-item" href="/">Action</a>*/}
-                                {/*<a className="dropdown-item" href="/">Another action</a>*/}
-                                {/*<div className="dropdown-divider"></div>*/}
-                                {/*<a className="dropdown-item" href="/">Something else here</a>*/}
-                            {/*</div>*/}
-                        {/*</li>*/}
 
                     </ul>
-                    <form className="form-inline my-2 my-lg-0">
+                    {/* <form className="form-inline my-2 my-lg-0">
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                    </form> */}
                 </div>
 
             </nav>

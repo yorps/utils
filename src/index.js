@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, HashRouter as Router} from 'react-router-dom'
 
 import './index.css';
 
@@ -22,8 +22,8 @@ import XMLFormatter from "./formatter/XMLFormatter";
 
 //Ab hier Routing
 const routing = (
-    <Router>
 
+    <Router basename={'/utils'}>
             <Route exact path="/" component={App} />
             <Route path="/datetool" component={DateTool} />
             <Route path="/converter" component={Converter} />
@@ -31,7 +31,6 @@ const routing = (
             <Route path="/base64decoder" component={Base64Decoder} />
             <Route path="/json" component={JSONFormatter} />
             <Route path="/xml" component={XMLFormatter} />
-
     </Router>
 )
 
