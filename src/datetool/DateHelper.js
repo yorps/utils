@@ -87,13 +87,11 @@ function isNumeric(n) {
  * Liefert null, wenn die Eingabe ungültig ist
  */
 export function parseDate(dateString) {
-    console.debug("parse " + dateString);
 
     const regex = /(\d{2}).(\d{2}).(\d{4}) (\d{2}):(\d{2}):(\d{2})/;
     const dateArray = regex.exec(dateString);
 
     if (dateArray == null) {
-        console.debug("UNGÜLTIG");
         return null;
     }
     //new Date(year, monthIndex [, day [, hour [, minutes [, seconds [, milliseconds]]]]]);

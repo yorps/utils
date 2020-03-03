@@ -19,7 +19,6 @@ class XMLFormatter extends Formatter {
         let formatted = '', indent = '';
         let tab = '\t';
         xml.split(/>\s*</).forEach(function (node) {
-            console.debug("split ", node);
             if (node.match(/^\/\w/)) indent = indent.substring(tab.length); // decrease indent by one 'tab'
             formatted += indent + '<' + node + '>\r\n';
             if (node.match(/^<?\w[^>]*[^]$/)) indent += tab;              // increase indent
