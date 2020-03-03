@@ -12,7 +12,6 @@ export default class CopyInput extends Component {
     render () {
         const text = this.props.text;
 
-        console.debug(this.state);
         return (
 
             <div className="input-group input-group-sm mb-3" style={{width:'195px'}}>
