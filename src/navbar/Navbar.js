@@ -70,7 +70,7 @@ export class Navbar extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
 
-                        <NavItem path="/" name="Home" />
+                        <NavItem path="#" name="Home" />
                         <NavItem path='#datetool' name="Date Tool" />
                         <NavItem path='#base64decoder' name="Base64-Decoder" />
                         <NavItem path="#generator" name="Hash Generator" />
