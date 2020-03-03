@@ -13,6 +13,8 @@ class App extends Component {
             <h2>Utils</h2>
 
               Eine Sammlung von Entwicklertools und eine Testapplikation für ReactJS.
+<br/><br/>
+              V 0.1.1
 
           </div>
 
