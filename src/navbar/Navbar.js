@@ -62,7 +62,7 @@ export class Navbar extends React.Component {
 
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="/">{appName}</a>
+                <a className="navbar-brand" href="#">{appName}</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"/>
                 </button>
@@ -70,7 +70,6 @@ export class Navbar extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
 
-                        <NavItem path="#" name="Home" />
                         <NavItem path='#datetool' name="Date Tool" />
                         <NavItem path='#base64decoder' name="Base64-Decoder" />
                         <NavItem path="#generator" name="Hash Generator" />
