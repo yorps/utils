@@ -12,7 +12,7 @@ class App extends Component {
           <div className="container">
             <h2>Utils</h2>
 
-              Eine Sammlung von Entwicklertools und eine Testapplikation für ReactJS.
+              Collection of developer tools.
 <br/><br/>
               V 0.1.1
 
