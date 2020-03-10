@@ -63,6 +63,12 @@ class DateTool extends React.Component {
 
         if (isValidTimestamp(newBaseTime)) {
             baseTime = newBaseTime;
+      
+            //ms to s
+            if (baseTime >= 1000000000000 && baseTime <= 9999999999999) {
+                baseTime = baseTime / 1000;
+            }
+            
             baseTimeString = formatDate(baseTime);
         } else {
             baseTime = '';

@@ -72,10 +72,15 @@ function getDaysInMonth (date) {
     return days[month];
 }
 
+/* Valid = numeric value with less than 12 or with 15 digits
+ * 
+ */
 
 export function isValidTimestamp(ts) {
     const newTimestamp = new Date(ts*1).getTime();
-    return isNumeric(newTimestamp) && newTimestamp <= 999999999999;
+    return isNumeric(newTimestamp) && 
+    (newTimestamp <= 9999999999 || 
+        (newTimestamp >= 1000000000000 && newTimestamp <= 9999999999999));
 }
 
 function isNumeric(n) {
