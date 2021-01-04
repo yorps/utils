@@ -32,14 +32,15 @@ export class DateOutput extends React.Component {
         if (time && time > 0) {
             timeOut = time;
             timeString = formatDate(time);
+            let date = new Date(time * 1000);
 
-            let offset = (new Date()).getTimezoneOffset() * 60;
+            let offset = date.getTimezoneOffset() * 60;
             timeStringLocale = formatDate(time-offset);
 
             secondsSinceMidnight = time % day;
             dayStart = time - secondsSinceMidnight;
             dayEnd = dayStart + day;
-            let date = new Date(time * 1000);
+          
             weekday = weekdays[date.getDay()];
         }
 
