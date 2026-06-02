@@ -1,71 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Developer Utilities (Utils)
 
-## Current Live Demo
-Deployed Application is available at https://yorps.github.io/utils/
+A modern, web-based collection of essential tools for developers. Built with React 19, Bootstrap 5, and TypeScript.
 
-## Available Scripts
+## 🚀 Live Demo
+The application is deployed and available at: **[https://yorps.github.io/utils/](https://yorps.github.io/utils/)**
 
+## ✨ Features
+
+### 🛠 Tools Included
+- **Date Tool:** Perform date calculations and format timestamps.
+- **Converters:**
+  - **Base64 Decoder:** Easily decode Base64 strings.
+  - **Unit Converter:** Convert various units of measurement.
+- **Generators:**
+  - **UUID Generator:** Generate unique version 4 UUIDs.
+  - **Hash Generator:** Create SHA-256 and other hashes from text.
+- **Formatters:**
+  - **JSON Formatter:** Beautify and validate JSON structures.
+  - **XML Formatter:** Format and check XML documents.
+
+### 💻 UI Features
+- **Modern Dashboard:** A clean, tile-based entry point for all tools.
+- **Search:** Quickly find the tool you need with the built-in search bar.
+- **Recently Used:** Keep track of your most frequently used tools (stored locally).
+- **Dark Mode:** Native Bootstrap 5 dark mode support.
+- **Responsive Design:** Optimized for mobile and desktop screens.
+- **Live Info:** Real-time display of your current IP, ISO date, and Unix time.
+
+## 🛠 Tech Stack
+- **Framework:** [React 19](https://react.dev/)
+- **Styling:** [Bootstrap 5.3](https://getbootstrap.com/)
+- **Routing:** [React Router 6](https://reactrouter.com/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Icons:** [Bootstrap Icons](https://icons.getbootstrap.com/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (Latest LTS recommended)
+- npm
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yorps/utils.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd utils
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Available Scripts
 In the project directory, you can run:
 
-### `npm start`
+- `npm start`: Runs the app in development mode at [http://localhost:3000](http://localhost:3000).
+- `npm run build`: Builds the app for production to the `build` folder.
+- `npm test`: Launches the test runner.
+- `npm run deploy`: Deploys the application to GitHub Pages.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📄 License
+This project is open-source. See the repository for more details.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
+*Created by [yorps](https://github.com/yorps)*
